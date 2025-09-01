@@ -11,6 +11,7 @@ urlpatterns = [
     path("me/", profile_view, name="profie_view")
 
     # create group
+    
 
     # create post
 ]
