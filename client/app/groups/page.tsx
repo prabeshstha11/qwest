@@ -50,10 +50,12 @@ export default function page() {
             </Link>
             <div className="flex flex-col gap-2">
                 {groups.map((group) => (
-                    <div key={group.id} className="card bg-base-100 shadow p-3 flex justify-between">
-                        <span className="font-medium">{group.groupname}</span>
-                        <span className="text-sm text-gray-500">{group.created_by}</span>
-                    </div>
+                    <Link href={`groups/${group.groupname}`}>
+                        <div key={group.id} className="card bg-base-100 shadow p-3 flex justify-between">
+                            <span className="font-medium">{group.groupname}</span>
+                            <span className="text-sm text-gray-500">{group.created_by}</span>
+                        </div>
+                    </Link>
                 ))}
             </div>
         </div>

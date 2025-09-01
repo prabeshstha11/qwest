@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-    title: "quest",
+    title: "qwest",
     description: "A community-driven platform where people share posts, join groups, and discover trending discussions.",
 };
 
