@@ -4,8 +4,9 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Cookies from "js-cookie";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
-export default function HomePage() {
+export default function Home() {
     const router = useRouter();
     const [username, setUsername] = useState<string | null>(null);
     const [error, setError] = useState("");
@@ -60,6 +61,13 @@ export default function HomePage() {
                     <button className="btn btn-primary" onClick={handleLogout}>
                         Logout
                     </button>
+                    <Link href={"create-group"}>
+                        <button className="btn btn-primary">Create Group</button>
+                    </Link>
+
+                    <Link href={"groups"}>
+                        <button className="btn btn-primary">View Groups</button>
+                    </Link>
                 </>
             ) : (
                 <p>Loading...</p>
