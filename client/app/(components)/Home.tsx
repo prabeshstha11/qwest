@@ -68,6 +68,14 @@ export default function Home() {
                     <Link href={"groups"}>
                         <button className="btn btn-primary">View Groups</button>
                     </Link>
+
+                    <Link href={"create-post"}>
+                        <button className="btn btn-primary">Create Post</button>
+                    </Link>
+
+                    <Link href={"posts"}>
+                        <button className="btn btn-primary">View all posts</button>
+                    </Link>
                 </>
             ) : (
                 <p>Loading...</p>

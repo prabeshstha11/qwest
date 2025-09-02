@@ -1,6 +1,8 @@
 from django.urls import path
 from core.views.user import RegisterView, LoginView, LogoutView, CustomTokenRefreshView, profile_view
 from core.views.group import GroupCreateView, GroupDetailView, AllGroupsView, MyGroupsView, JoinGroupView, LeaveGroupView
+from core.views.post import PostListCreateView, PostDetailView, MyPostListView
+from core.views.postgroup import GroupPostListCreateView
 
 urlpatterns = [
 
@@ -20,4 +22,11 @@ urlpatterns = [
     path("groups/<str:groupname>/leave/", LeaveGroupView.as_view(), name="group-leave"),
 
     # create post
+    path("posts/", PostListCreateView.as_view(), name="post-list-create"),
+    path("posts/<int:pk>/", PostDetailView.as_view(), name="post-detail"),
+    path("posts/my/", MyPostListView.as_view(), name="my-posts"),
+
+    # group post
+    path("groups/<str:groupname>/posts/", GroupPostListCreateView.as_view(), name="group-posts"),
+
 ]

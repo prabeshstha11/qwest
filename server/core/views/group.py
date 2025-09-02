@@ -78,3 +78,5 @@ class LeaveGroupView(APIView):
 
         membership.delete()
         return Response({"detail": "Left group successfully."}, status=status.HTTP_200_OK)
+
+

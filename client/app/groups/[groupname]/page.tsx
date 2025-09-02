@@ -17,7 +17,7 @@ interface Group {
     is_creator?: boolean;
 }
 
-export default function GroupPage() {
+export default function page() {
     const { groupname } = useParams();
     const [group, setGroup] = useState<Group | null>(null);
     const [loading, setLoading] = useState(true);
